@@ -42,7 +42,7 @@ class HomePageAdapter(private val context: Context, private var moviesList: Movi
                 listener(onSuccess = { _, res ->
                     posterImage.setImageDrawable(res.drawable)
                 }, onError = { _, _ ->
-                    Log.d("praveenMovie", "Error to load icon ${title.text}")
+                    Log.d(tag, "Error to load icon ${title.text}")
                 })
             }
         }
@@ -87,5 +87,8 @@ class HomePageAdapter(private val context: Context, private var moviesList: Movi
         }
     }
 
+    companion object {
+        const val tag = "HomePageAdapter"
+    }
 
 }
